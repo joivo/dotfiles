@@ -1,9 +1,7 @@
+set shell=/bin/bash
 set number
 set nocompatible    
 set history=100
-
-filetype plugin on
-filetype indent on
 
 set autoread
 set mouse=a
@@ -30,12 +28,16 @@ set tabstop=4
 set undodir=~/.vim/undobackups
 set undofile
 
+filetype off
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
-
-
-" All of your Plugins must be added before the following line
+Plugin 'Vundle/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'file:///home/gmarik/path/to/plugin'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 call vundle#end()            
-filetype plugin indent on   
+
+filetype plugin indent on
