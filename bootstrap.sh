@@ -4,7 +4,6 @@ set -e -x
 
 replace_bashrc() {
     cat .bashrc > ~/.bashrc
-    cat .bash_aliases > ~/.bash_aliases
 }
 
 
@@ -15,14 +14,9 @@ setup_vim() {
     vim +PluginInstall +qall
 }
 
-install_vim() {
-    sudo apt-get -y -qq install vim 1>/dev/null
-    setup_vim    
-}
-
 main() {
     replace_bashrc
-    install_vim
+    setup_vim
 }
 
 main
