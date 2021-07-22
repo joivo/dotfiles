@@ -1,0 +1,40 @@
+[user]
+	email = emanueljoivo@gmail.com
+	name = Emanuel Joivo
+[github]
+	user = joivo
+[color]
+	ui = auto
+[core]
+	editor = nvim
+[merge]
+	tool = ediff
+	log = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[commit]
+	verbose = true
+[branch]
+	autosetuprebase = always
+[help]
+	autocorrect = 1
+[push]
+	default = current
+[status]
+	color = true
+	submodulesummary = true
+	showUntrackedFiles = all
+[apply]
+	whitespace = fix
+[alias]
+	co = checkout
+	st = status -sb
+	lg = log --all --graph --decorate --oneline --abbrev-commit
+	ac = !git add -A && git commit
+	cm = commit
+	tags = tag -l
+	branches = branch -a
+	remotes = remove -v
+	undo = reset HEAD~1 --mixed
+	amend = commit -a --amend
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
